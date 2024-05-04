@@ -29,10 +29,10 @@ const GreenPalette = () => {
           <Text style={styles.label}>Yellow Green</Text>
         </View>
         <View style={[styles.card, styles.cardEight]}>
-          <Text style={styles.label}>Sea Green</Text>
+          <Text style={[styles.label, styles.labelLight]}>Sea Green</Text>
         </View>
         <View style={[styles.card, styles.cardNine]}>
-          <Text style={styles.label}>Dark Green</Text>
+          <Text style={[styles.label, styles.labelLight]}>Dark Green</Text>
         </View>
       </ScrollView>
     </View>
@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
     width: 123,
     margin: 10,
     borderRadius: 10,
-    color: "lightseagreen",
     ...Platform.select({
       ios: {
         shadowOffset: {
@@ -81,6 +80,10 @@ const styles = StyleSheet.create({
   },
   label: {
     textAlign: "center",
+    color: "#333333",
+  },
+  labelLight: {
+    color: "#cccccc",
   },
   cardOne: {
     marginLeft: 20,

@@ -9,37 +9,37 @@ const PurplePalette = () => {
       <View style={styles.rows}>
         <View style={[styles.row, styles.rowOne]}>
           <View style={[styles.card, styles.cardOne]}>
-            <Text>Purple</Text>
+            <Text style={[styles.label, styles.labelLight]}>Purple</Text>
           </View>
           <View style={[styles.card, styles.cardTwo]}>
-            <Text>Dark Violet</Text>
+            <Text style={[styles.label, styles.labelLight]}>Dark Violet</Text>
           </View>
           <View style={[styles.card, styles.cardThree]}>
-            <Text>Medium Orchid</Text>
+            <Text style={[styles.label, styles.labelLight]}>Medium Orchid</Text>
           </View>
         </View>
 
         <View style={[styles.row, styles.rowTwo]}>
           <View style={[styles.card, styles.cardFour]}>
-            <Text>Magenta</Text>
+            <Text style={styles.label}>Magenta</Text>
           </View>
           <View style={[styles.card, styles.cardFive]}>
-            <Text>Orchid</Text>
+            <Text style={styles.label}>Orchid</Text>
           </View>
           <View style={[styles.card, styles.cardSix]}>
-            <Text>Violet</Text>
+            <Text style={styles.label}>Violet</Text>
           </View>
         </View>
 
         <View style={[styles.row, styles.rowThree]}>
           <View style={[styles.card, styles.cardSeven]}>
-            <Text>Plum</Text>
+            <Text style={styles.label}>Plum</Text>
           </View>
           <View style={[styles.card, styles.cardEight]}>
-            <Text>Thistle</Text>
+            <Text style={styles.label}>Thistle</Text>
           </View>
           <View style={[styles.card, styles.cardNine]}>
-            <Text>Lavender</Text>
+            <Text style={styles.label}>Lavender</Text>
           </View>
         </View>
       </View>
@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
     width: 123,
     margin: 10,
     borderRadius: 10,
-    color: "indigo",
     ...Platform.select({
       ios: {
         shadowOffset: {
@@ -101,6 +100,13 @@ const styles = StyleSheet.create({
         elevation: 5,
       },
     }),
+  },
+  label: {
+    textAlign: "center",
+    color: "#333333",
+  },
+  labelLight: {
+    color: "#cccccc",
   },
   cardOne: {
     marginLeft: 0,
