@@ -6,7 +6,7 @@ const GreenPalette = () => {
     <View style={styles.wrapper}>
       <Text style={styles.headingText}>Green Palette</Text>
 
-      <ScrollView horizontal={true} style={styles.cards}>
+      <ScrollView horizontal={true} persistentScrollbar={true} style={styles.cards}>
         <View style={[styles.card, styles.cardOne]}>
           <Text style={styles.label}>Pale Green</Text>
         </View>
