@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Platform } from "react-native";
 import React from "react";
 
 const PurplePalette = () => {
@@ -50,23 +50,21 @@ const PurplePalette = () => {
 export default PurplePalette;
 
 const styles = StyleSheet.create({
-  headingText: {
+  wrapper: {
     marginTop: 50,
-    marginLeft: 20,
+    marginHorizontal: 20,
+  },
+  headingText: {
     fontSize: 24,
     fontWeight: "bold",
     color: "indigo",
   },
-  wrapper: {
-    marginVertical: 10,
-  },
   rows: {
-    marginVertical: 2,
+    marginVertical: 1,
   },
   row: {
     flex: 1,
     flexDirection: "row",
-    paddingHorizontal: 10,
   },
   rowOne: {
     paddingTop: 5,
@@ -85,37 +83,56 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 100,
-    weight: 100,
-    padding: 10,
+    width: 123,
     margin: 10,
     borderRadius: 10,
     color: "indigo",
+    ...Platform.select({
+      ios: {
+        shadowOffset: {
+          width: 3,
+          height: 3,
+        },
+        shadowColor: "blue",
+        shadowOpacity: 0.5,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
   },
   cardOne: {
+    marginLeft: 0,
     backgroundColor: "purple",
   },
   cardTwo: {
     backgroundColor: "darkviolet",
   },
   cardThree: {
+    marginRight: 0,
     backgroundColor: "mediumorchid",
   },
   cardFour: {
+    marginLeft: 0,
     backgroundColor: "magenta",
   },
   cardFive: {
     backgroundColor: "orchid",
   },
   cardSix: {
+    marginRight: 0,
     backgroundColor: "violet",
   },
   cardSeven: {
+    marginLeft: 0,
     backgroundColor: "plum",
   },
   cardEight: {
     backgroundColor: "thistle",
   },
   cardNine: {
+    marginRight: 0,
     backgroundColor: "lavender",
   },
 });
